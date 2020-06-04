@@ -16,10 +16,9 @@
   <label for="house">House:</label>
   <select name="house" id="house">
     <option selected disabled>Please select a house</option>
-    <option value="Gryffindor">Gryffindor</option>
-    <option value="Hufflepuff">Hufflepuff</option>
-    <option value="Slytherin">Slytherin</option>
-    <option value="Ravenclaw">Ravenclaw</option>
+    <% @houses.each do |house| %>
+    <option value=<%= house.name %>><%= house.name %></option>
+    <% end %>
   </select>
 
   <label for="quantity">Age:</label>
